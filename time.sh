@@ -18,6 +18,7 @@ if [ -z "${TIME_CMD-}" ]; then
     for TIME_CMD in \
         'date +%s%3N' \
         'python -c "from time import time; print (int(time()*1000))"' \
+        'python3 -c "from time import time; print (int(time()*1000))"' \
         'perl -MPOSIX=strftime -MTime::HiRes=time -le "print int(time*1000)"' \
         'date +%s000' \
         'echo 0' ;
