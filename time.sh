@@ -22,7 +22,7 @@ if [ -z "${TIME_CMD-}" ]; then
         'date +%s000' \
         'echo 0' ;
     do
-        _tsh_tmp=$(eval "$TIME_CMD") 2>/dev/null &&
+        _tsh_tmp=$(eval "$TIME_CMD" 2>/dev/null) &&
             case $_tsh_tmp in *[!0-9]*|'') ;;  *) break; esac
     done
 fi
